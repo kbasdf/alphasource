@@ -2,7 +2,7 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
-    // Handle form submissions
+    // Handle form submissions (POST /submit)
     if (url.pathname === "/submit" && request.method === "POST") {
       const formData = await request.formData();
       const email = formData.get("email");
@@ -24,7 +24,7 @@ export default {
       return new Response("Thank you! Your entry has been saved.");
     }
 
-    // Serve entry.txt contents
+    // Serve entry.txt contents (GET /entry.txt)
     if (url.pathname === "/entry.txt" && request.method === "GET") {
       const contents = await env.GUESTBOOK.get("entry.txt");
       return new Response(contents || "", {
@@ -32,6 +32,7 @@ export default {
       });
     }
 
+    // Default response
     return new Response("Method not allowed", { status: 405 });
   }
 };
