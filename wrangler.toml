@@ -1,0 +1,7 @@
+name = "as"          # must match your Worker/Pages project name
+main = "src/index.js"          # entry point for your Worker code
+compatibility_date = "2026-08-04"
+
+[[kv_namespaces]]
+binding = "GUESTBOOK"          # this is the name you use in code (env.GUESTBOOK)
+id = "d29859c4969e48b5b48f1b024f92371e"   # your real KV namespace ID
