@@ -1,4 +1,4 @@
-name = "alphasource1"          # must match your Worker/Pages project name
+name = "alphasource"          # must match your Worker/Pages project name
 main = "src/index.js"          # entry point for your Worker code
 compatibility_date = "2026-08-04"
 
