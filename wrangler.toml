@@ -1,0 +1,9 @@
+name = "guestbook-worker"
+main = "worker.js"
+compatibility_date = "2026-08-04"
+
+[vars]
+
+[[kv_namespaces]]
+binding = "GUESTBOOK"
+id = "your-kv-id"
